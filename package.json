@@ -4,14 +4,14 @@
   "description": "React sreen keyboard",
   "main": "Keyboard.js",
   "scripts": {
-    "dist": "NODE_ENV=production webpack -p",
+    "dist": "cross-env NODE_ENV=production webpack -p",
     "build": "babel ./src -d ./lib --source-maps",
     "lint": "eslint src/** webpack eslint --cache; exit 0",
     "lint:fix": "eslint src/** webpack eslint --cache --fix; exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/WiaczeslawP/react-screen-keyboard"
+    "url": "https://github.com/mbosetti/react-screen-keyboard"
   },
   "keywords": [
     "react",
@@ -23,9 +23,9 @@
   "author": "Wiaczeslaw Puchkov <wiaczeslaw.ss@gmail.com> (https://github.com/WiaczeslawP)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WiaczeslawP/react-screen-keyboard/issues"
+    "url": "https://github.com/mbosetti/react-screen-keyboard/issues"
   },
-  "homepage": "https://github.com/WiaczeslawP/react-screen-keyboard",
+  "homepage": "https://github.com/mbosetti/react-screen-keyboard",
   "devDependencies": {
     "autoprefixer": "6.3.7",
     "babel-cli": "^6.11.4",
@@ -60,6 +60,7 @@
     "webpack": "1.13.1"
   },
   "dependencies": {
+    "cross-env": "^5.0.3",
     "css-modules-require-hook": "~4.0.1",
     "style-loader": "~0.13.1",
     "css-loader": "~0.23.1"

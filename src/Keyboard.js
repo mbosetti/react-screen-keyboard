@@ -71,10 +71,8 @@ export default class Keyboard extends PureComponent {
 		if (this.props.onClick) {
 			this.props.onClick(nextValue);
 		}
-		setTimeout(() => {
-			inputNode.focus();
-			inputNode.setSelectionRange(selectionStart + 1, selectionStart + 1);
-		}, 0);
+		inputNode.focus();
+		inputNode.setSelectionRange(selectionStart + 1, selectionStart + 1);
 		this.setState({uppercase: this.isUppercase()});
 		inputNode.dispatchEvent(new Event('input', {bubbles: true}));
 	}
@@ -97,10 +95,8 @@ export default class Keyboard extends PureComponent {
 		if (this.props.onClick) {
 			this.props.onClick(nextValue);
 		}
-		setTimeout(() => {
-			inputNode.focus();
-			inputNode.setSelectionRange(nextSelectionPosition, nextSelectionPosition);
-		}, 0);
+		inputNode.focus();
+		inputNode.setSelectionRange(nextSelectionPosition, nextSelectionPosition);
 		this.setState({uppercase: this.isUppercase()});
 		inputNode.dispatchEvent(new Event('input', {bubbles: true}));
 	}
